@@ -1,0 +1,266 @@
+/* Main layout styles
+      -------------------------------------------------- */
+
+
+html, body {
+	height: 100%;
+
+    /* The html and body elements cannot have any padding or margin. */
+    padding:0;
+    margin:0;
+    
+}
+
+body{
+	background-color: rgb(241, 242, 246) !important;
+
+}
+
+#main-container{
+	
+	height: 90%;
+	overflow: hidden;
+	width: 90%;
+
+}
+
+#main-row{
+
+	height: 100%;
+
+}
+#left, #right{
+
+	height: 100% ;
+	
+	/*background-color:#fff;*/
+}
+
+#left>.well,#right>.well{
+
+	height: 100%;
+}
+
+
+
+/*#right{
+	margin-lefrt: 1%;
+}*/
+
+/* Login page specific styles
+      -------------------------------------------------- */
+
+#login-image-container{
+	/*border: 1px black solid;*/
+	width: 100%!important;
+	height: 40%!important;
+	margin-left: 0.75%;
+
+}
+#login-image-container img{
+
+    margin: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+};
+
+#login-header{
+
+	text-align: center;
+}
+
+#login-form{
+	width: 90%;
+	/*border: 1px black solid;*/
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.regform{
+
+	height:30px!important;
+}
+
+#login-form > input{
+
+	padding: 3px;
+}
+
+#btn-login, #btn-register{
+
+	background-color: #26A65B!important;
+	border-color: #26A65B!important;
+}
+
+#signup-header{
+	margin-top: 5px !important;
+	margin-bottom: 0px !important;
+	margin-left: 15px;
+	font-weight: bolder!important;
+	font-family: 'Open Sans' !important;
+	text-rendering: optimizeLegibility;
+}
+
+#signup-form-container{
+	padding: 20px;
+}
+
+.signup-section-header{
+	font-size: 18px;
+}
+
+.fa-signup{
+
+	width: 15px!important;
+}
+
+.lead{
+	margin-bottom: 0px !important;
+	margin-left: 15px;
+}
+/* Navbar styles
+      -------------------------------------------------- */
+.navbar-nav>.active>a{
+	background-color: #2b2b2b !important;
+}
+
+
+
+/* Sticky footer styles
+      -------------------------------------------------- */
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -50px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+	max-height: auto;
+	height: 70px;
+}
+
+#footer {
+	background-color: #333333 !important;
+
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}	
+}
+
+#copyright{
+	color: #8c8c8c;
+	margin-top: 15px;
+}
+
+
+#upload-pane-top{
+    width: 100%;
+	margin-top: -10px;
+	background-color: #333;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+#upload-pane-top > i{
+	float: left;
+}
+
+#upload-pane-top > p{
+
+	font-size: 18px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom:0px;
+	margin-top:5px;
+}
+
+#right-content-upload{
+	width: 100%;
+	height: 100%;
+	padding-right:5px;
+	padding-left:5px;
+	background-color: white;
+}
+
+#upload-pane-form{
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+#uploaded-files{
+
+    overflow-y: scroll;
+}
+
+#user-upload-left,#user-upload-right{
+    height: 100%;
+
+}
+
+#user-upload-left > .well{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#user-upload-right > .well{
+    padding-left: 15px;
+	padding-right: 15px;
+}
+/*Category Tree Scrollbar styles*/
+
+::-webkit-scrollbar {
+      width: 10px;
+}
+::-webkit-scrollbar-track {
+      background-color: #ffffff;
+} 
+::-webkit-scrollbar-thumb {
+      background-color: #757D75; 
+} 
+
+/* User page styles */
+
+#user-upload-left > .well{
+    
+    height:100%;
+    overflow-y: scroll;
+}
+
+#user-upload-right > .well{
+    
+    height:100%;
+    
+}
+
+#uploaded-files{
+    
+    height:100%;
+    padding-left:0px;
+    padding-right:0px;
+    overflow-y: scroll;
+    
+}
+

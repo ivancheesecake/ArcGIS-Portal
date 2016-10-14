@@ -1,0 +1,44 @@
+function initialize(){
+	console.log(objects);
+	//use AJAX to request for needed data
+	$.ajax({
+ 		type: 'POST',
+ 		url: 'http://localhost/repositoryPrototype/index.php/user/initialize',
+ 		dataType: 'json',
+		
+		success: function( resp ){	//if AJAX request is successful
+
+			categories = resp.categories;
+			subcategories = resp.subcategories;
+			filetypes = resp.filetypes;
+
+			for(var i=0; i< filetypes.length; i++){	//for all returned filetypes
+
+				colors.push(filetypes[i].color);	
+				icons.push(filetypes[i].icon);
+
+				//can be transferred to another loop but it's more efficient to place this here
+				//sorry for being inconsistent with design for efficiency's sake
+				$('#file-types').append('<a href="#" class="filetype-dropdown-item" data-filetype="'+filetypes[i].id+'">'+filetypes[i].filetype+'</a>');
+			}
+			
+			renderNavigationTree(categories,subcategories);
+			attachFileTypeFilter();
+			renderFiles(files,colors,icons, filter);
+
+			if(typeof(Storage) !== "undefined") {
+    			cart = JSON.parse(sessionStorage.getItem("cart"));
+				cart_ids = JSON.parse(sessionStorage.getItem("cart_ids"));
+				renderCartItems(cart);
+			} else {
+    		
+			}
+			
+
+		},
+		error: function (resp){
+
+		}
+	});
+
+}
